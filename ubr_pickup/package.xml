@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package>
+  <name>ubr_pickup</name>
+  <version>0.0.0</version>
+  <description>The ubr_pickup package</description>
+
+  <maintainer email="carl@todo.todo">carl</maintainer>
+
+
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>ubr1_grasping</build_depend>
+  <build_depend>ubr1_gazebo</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+
+  <run_depend>ubr1_grasping</run_depend>
+  <run_depend>ubr1_gazebo</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+
+
+  <export>
+  </export>
+</package>

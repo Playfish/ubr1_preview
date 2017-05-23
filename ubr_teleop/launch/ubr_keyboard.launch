@@ -1,0 +1,18 @@
+<launch>
+
+  <!-- mobile base nodelet manager 
+  <node pkg="nodelet" type="nodelet" name="mobile_base_nodelet_manager" args="manager"/>-->
+  <!-- velocity commands multiplexer 
+  <node pkg="nodelet" type="nodelet" name="cmd_vel_mux" args="load yocs_cmd_vel_mux/CmdVelMuxNodelet mobile_base_nodelet_manager">
+    <param name="yaml_cfg_file" value="$(find ubr_teleop)/param/mux.yaml"/>
+    <remap from="cmd_vel_mux/output" to="base_controller/command"/>
+  </node>-->
+
+  <!-- bringup a mux between our application and the teleop 
+  <node pkg="topic_tools" type="mux" name="cmd_vel_mux" respawn="true" args="base_controller/command /cmd_vel /teleop/cmd_vel">
+    <remap from="mux" to="cmd_vel_mux" />
+  </node>
+-->
+  <node pkg="ubr_teleop" type="keyboard_teleop" name="ubr_teleop_keyboard"  output="screen"/>
+
+</launch>

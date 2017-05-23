@@ -1,0 +1,9 @@
+subscribers:
+  - name:        "Teleoperation"
+    topic:       "/teleop/cmd_vel"
+    timeout:     1.0
+    priority:    7
+  - name:        "Switch"
+    topic:       "/cmd_vel"
+    timeout:     1.0
+    priority:    6
